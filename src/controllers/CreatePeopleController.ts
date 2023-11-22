@@ -1,11 +1,11 @@
 import { Request, Response } from "express";
-import { PeopleService } from "../services/PeopleService";
+import { CreatePeopleService } from "../services/CreatePeopleService";
 
-export class PeopleController {
+export class CreatePeopleController {
   async handle(req: Request, res: Response) {
     const { name, document, password } = req.body;
 
-    const service = new PeopleService();
+    const service = new CreatePeopleService();
 
     const result = await service.execute({ name, document, password });
     

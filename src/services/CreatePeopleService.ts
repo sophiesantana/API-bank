@@ -7,10 +7,18 @@ type PeopleRequest = {
   password: string
 }
 
-export class PeopleService {
+function transDocString(doc: string): string {
+  const numericString = doc.replace(/\D/g, '');
+
+  return numericString;
+}
+
+export class CreatePeopleService {
   async execute({ name, document, password }: PeopleRequest): Promise<People | Error> {
+    document = transDocString(document);
+
     const peopleRepository = AppDataSource.getRepository(People);
-    
+
     if (
       await peopleRepository.findOne({
         where: {
@@ -28,6 +36,9 @@ export class PeopleService {
     })
 
     await peopleRepository.save(person);
+
+    delete person.password;
+
     return person;
   }
 }

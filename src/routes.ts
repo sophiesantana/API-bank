@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { PeopleController } from "./controllers/PeopleController";
+import { CreatePeopleController } from "./controllers/CreatePeopleController";
 
 const routes = Router();
 
-routes.post("/people", new PeopleController().handle);
+routes.post("/people", new CreatePeopleController().handle);
 
 export default routes;
