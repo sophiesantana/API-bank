@@ -33,7 +33,7 @@ export class LoginService {
       return new Error("Usuário ou senha inválidos.");
     }
 
-    const token = jwt.sign({ data: { userId: user.id } }, secret, jwtConfig);
+    const token = jwt.sign({ data: { user_id: user.id } }, secret, jwtConfig);
 
     return token;
   }
