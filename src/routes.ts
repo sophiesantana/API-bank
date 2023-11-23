@@ -5,6 +5,7 @@ import { CreateAccountController } from "./controllers/CreateAccountController";
 import { GetAccountsController } from "./controllers/GetAccountsController";
 import { CreateCardController } from "./controllers/CreateCardController";
 import { GetCardsController } from "./controllers/GetCardsController";
+import { GetCardsByPersonController } from "./controllers/GetCardsByPersonController";
 const validateJWT = require("./Auth/ValidateJWT");
 
 const routes = Router();
@@ -15,6 +16,7 @@ routes.post("/accounts", validateJWT, new CreateAccountController().handle);
 routes.get("/accounts", validateJWT, new GetAccountsController().handle);
 routes.post("/accounts/:account_id/cards", validateJWT, new CreateCardController().handle);
 routes.get("/accounts/:account_id/cards", validateJWT, new GetCardsController().handle);
+routes.get("/accounts/cards", validateJWT, new GetCardsByPersonController().handle);
 
 
 export default routes;
