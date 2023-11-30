@@ -37,12 +37,12 @@ export class CreateCardService {
     } as DeepPartial<Card>)
 
     await cardRepository.save(createdCard);
-
+    
     delete createdCard.user_id;
     delete createdCard.account_id;
-
-    createdCard.number.slice(-4);
-
+    
+    createdCard.number = createdCard.number.slice(-4);
+    
     return createdCard;
   }
 }
