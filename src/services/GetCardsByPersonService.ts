@@ -15,7 +15,7 @@ export class GetCardsByPersonService {
     const cardsRepository = AppDataSource.getRepository(Card);
 
     const getCards = cardsRepository.findBy({ user_id });
-
+    
     const formatResult = (await getCards).map((card): ReturnCard => {
       return {
         'id': card.id,

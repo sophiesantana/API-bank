@@ -21,7 +21,7 @@ export class CreateCardController {
     if (result instanceof Error) {
       return res.status(401).json(result.message);
     }
-
+    
     return res.json(result);
   }
 }
