@@ -22,7 +22,7 @@ Para configurar o banco de dados e executar as migrações, utilize os seguintes
 * Criar uma pessoa (CPF ou CNPJ único).
 * Adicionar e listar contas de uma pessoa.
 * Adicionar e listar cartões de uma conta.
-* Listar cartões de uma pessoa.
+* Realizar transações em uma conta.
 
 
 ### Rotas Desprotegidas
@@ -43,7 +43,6 @@ Para configurar o banco de dados e executar as migrações, utilize os seguintes
 2. Paginação.
 3. Outras Rotas:
 
-* POST /accounts/:accountId/transactions: Adicionar transação.
 * GET /accounts/:accountId/transactions: Listar transações.
 * GET /accounts/:accountId/balance: Verificar saldo.
 * POST /accounts/:accountId/transactions/:transactionId/revert [Opcional]: Reverter transação.
