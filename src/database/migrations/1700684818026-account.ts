@@ -27,6 +27,11 @@ export class Account1700684818026 implements MigrationInterface {
                         isUnique: true
                     },
                     {
+                        name: "balance",
+                        type: "int",
+                        default: 0
+                    },
+                    {
                         name: "created_at",
                         type: "timestamp",
                         default: "now()"

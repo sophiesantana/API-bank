@@ -38,6 +38,7 @@ export class CreateAccountService {
     await accountRepository.save(createdAccount);
 
     delete createdAccount.user_id;
+    delete createdAccount.balance;
 
     return createdAccount;
   }
