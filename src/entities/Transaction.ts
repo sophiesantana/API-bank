@@ -13,10 +13,10 @@ export class Transaction {
   id: string;
 
   @Column()
-  user_id: string;
+  user_id?: string;
 
   @Column()
-  account_id: string;
+  account_id?: string;
 
   @Column()
   value: number;
