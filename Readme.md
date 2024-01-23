@@ -1,5 +1,4 @@
 # API Financeira
-## Desafio Cubos - Backend Júnior
 
 Esta API Rest oferece as principais funcionalidades de uma aplicação financeira, permitindo a gestão de pessoas, contas, cartões e transações. Utiliza tecnologias como NodeJS, Express, Typescript, TypeORM, PostgreSQL, e adota autenticação Bearer/JWT.
 
